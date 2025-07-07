@@ -1,0 +1,16 @@
+Explain how arrays are represented in memory and their advantages.
+Arrays are stored in computer memory as a collection of elements of the same data type, placed in contiguous memory locations. This means that each element directly follows the previous one in memory, without any gaps. The key to accessing elements is the base address (the starting memory address of the array) and the index of the desired element. The memory address of any element can be calculated directly by adding the base address to the product of its index and the size of each element. This contiguous storage offers several advantages: fast access (O(1) time complexity for any element), efficient memory usage due to minimal overhead, and cache friendliness, as related data is clustered together, improving CPU performance. They serve as a foundational data structure for many algorithms and more complex data structures like stacks and queues
+
+Analyze the time complexity of each operation (add, search, traverse, delete).
+Add: Adding an element to the end of an array is fast, with an average time complexity of O(1). However, if the array is full and needs to be resized, the operation becomes O(n) because a new, larger array must be created and all existing elements copied over.
+
+Search: Searching for a specific employee requires checking each element one by one until it's found. This is a linear search, which has a time complexity of O(n).
+
+Traverse: Traversing, or visiting, every employee in the array involves going through each element once. This operation has a time complexity of O(n).
+
+Delete: Deleting an employee involves first finding it (O(n)) and then shifting all subsequent elements one spot to the left to fill the gap. This shifting also takes O(n) time, making the overall complexity O(n).
+
+Discuss the limitations of arrays and when to use them.
+While arrays offer excellent performance for specific tasks, they come with notable limitations. The most significant is their fixed size. Once an array is declared, its capacity cannot be changed. This leads to issues like memory wastage if the allocated size is greater than the actual data, or overflow errors if more data needs to be stored than the array can hold, requiring a new, larger array and data copying. Furthermore, arrays are typically homogeneous, meaning they can only store elements of a single data type, limiting flexibility for diverse data. Insertion and deletion of elements in the middle of an array are also inefficient, as they often require shifting many subsequent elements, incurring a time complexity of O(n).
+
+Arrays are best used when you have a collection of items whose size is known and doesn't change frequently, and when your primary need is to access elements quickly by their index.
