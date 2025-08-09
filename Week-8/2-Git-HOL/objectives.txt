@@ -1,0 +1,19 @@
+Explain git ignore
+Git ignore is a way of telling Git, “Hey, don’t bother tracking these files.”
+When you work on a project, not every file in your folder needs to be saved in the Git repository. 
+For example, you might have log files created during testing, temporary files from your editor, or 
+build output folders that can easily be regenerated like the node module folders in React. These files 
+clutter your commits and aren’t useful for others who work on the project. By using a special file called 
+.gitignore, you can list patterns that match these unwanted files and folders. Once listed, Git will 
+completely ignore them — they won’t show up in git status, and they won’t be added or committed by accident. 
+This keeps your repository clean, focused only on the important source files, and makes collaboration 
+easier because everyone avoids pushing unnecessary or sensitive files.
+
+How to Use .gitignore
+Using .gitignore is a straightforward process. First, you need to create a file named .gitignore in the root 
+directory of your Git repository. The file must be named exactly .gitignore, with the leading period. Inside 
+this file, you simply list the names of the files and directories you want Git to ignore. You can use wildcards 
+to ignore multiple files at once. For example, to ignore all files with the .log extension, you would add 
+*.log to your .gitignore file. To ignore a specific folder and all its contents, you would add the folder's 
+name followed by a slash, like build/. It's a good practice to commit the .gitignore file itself so that 
+everyone collaborating on the project automatically uses the same set of ignored files.
