@@ -1,0 +1,34 @@
+What are branching and merging?
+
+Branching is like creating a separate, independent line of development from your main project. Think of it 
+as making a copy of your codebase at a specific point in time so you can work on new features or bug fixes 
+without affecting the main version of your project. This allows multiple people to work on different things 
+simultaneously without interfering with each other's work. The main branch is the default branch in Git and 
+is generally considered the stable, production-ready version of your code.
+
+Merging is the process of combining the changes from one branch into another. Once you've finished working 
+on a new feature or bug fix on your separate branch and it's stable, you'll want to integrate those changes 
+back into the main branch. Merging takes all the commits from your feature branch and applies them to the 
+target branch, effectively bringing your new work into the main codebase.
+
+Creating a branch in GitLab
+
+In GitLab, creating a new branch is a simple process. First, navigate to your project's repository. You'll 
+see a dropdown menu that shows the current branch (usually main). Click on it and then type the name you 
+want for your new branch in the search box. For example, you might name it feature/add-user-authentication. 
+After typing the name, a button will appear that says "Create branch: [your branch name]". Click on that 
+button, and GitLab will create a new branch based on the current branch you were on.
+
+Creating a merge request in GitLab
+
+A merge request (MR) in GitLab is a formal way to propose that your changes from a branch be merged into 
+another branch, typically the main branch. It's a key part of the collaboration workflow. To create one, 
+first, push your branch with all your changes to GitLab. Then, navigate to the repository on the GitLab web 
+interface. GitLab will often show a banner at the top of the page that says "You pushed to [your branch name]. 
+Create merge request." Click on this button.
+
+Alternatively, you can go to the "Merge Requests" section from the left-hand navigation menu and click 
+"New merge request." You'll be asked to select a source branch (your new branch) and a target branch (e.g., main). 
+After selecting the branches, you'll be taken to a page where you can fill out details about your merge request, 
+such as a title, a description of the changes, and assign reviewers. This is where you explain what you 
+did and why, making it easy for others to review your code before it gets merged.
